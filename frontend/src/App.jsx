@@ -20,7 +20,7 @@ function App() {
         </a>
       </div>
       <div className="App">
-     	 <Greeting name="World" />
+     	 <Greeting name="TESTING HELLO WORLD!!!" />
       </div>
       <h1>Vite + React</h1>
       <div className="card">

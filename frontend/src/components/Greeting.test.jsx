@@ -1,3 +1,5 @@
+
+/* global describe, it, expect */
 import { render, screen } from '@testing-library/react';
 import Greeting from './Greeting';
 
