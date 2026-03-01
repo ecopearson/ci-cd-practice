@@ -9,7 +9,7 @@ on:
 
 permissions:
   contents: read
-  security-events: write   # needed if you upload SARIF to Code Scanning
+  #security-events: write   # needed if you upload SARIF to Code Scanning
 
 jobs:
   snyk-backend:
@@ -36,7 +36,8 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         run: |
-          snyk test --severity-threshold=high
+          snyk test 
+        # --severity-threshold=high
 
       # SAST: code scan
       - name: Snyk Code (SAST) - Backend
@@ -71,7 +72,8 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         run: |
-          snyk test --severity-threshold=high
+          snyk test 
+        #--severity-threshold=high
 
       - name: Snyk Code (SAST) - Frontend
         env:
