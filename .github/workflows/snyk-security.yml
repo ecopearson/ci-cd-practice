@@ -44,7 +44,8 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         run: |
-          snyk code test --severity-threshold=high
+          snyk code test 
+        #--severity-threshold=high
 
   snyk-frontend:
     name: Snyk - Frontend (Node) SCA + SAST
@@ -73,10 +74,11 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         run: |
           snyk test 
-        #--severity-threshold=high
+        #--severity-threshold=
 
       - name: Snyk Code (SAST) - Frontend
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         run: |
-          snyk code test --severity-threshold=high
+          snyk code test 
+        #--severity-threshold=high
